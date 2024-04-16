@@ -7,11 +7,13 @@ public class MultipleAudioClips : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip[] audioClips;
     public float timeBetweenClips = 1;
+    public float timeBeforeStart = 3;
     private int index;
     private float timer = 0f;
 
     private void Start()
     {
+        timer = timeBeforeStart;
         audioSource = GetComponent<AudioSource>();
     }
 

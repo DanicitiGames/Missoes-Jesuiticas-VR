@@ -8,16 +8,15 @@ public class FadeInOut : MonoBehaviour
     public bool start = true;
     public bool fadeIn = true;
     
-    private RawImage image;
+    private Renderer renderer;
     private float timer = 0;
     private bool fading = false;
 
     private void Start()
     {
-        image = GetComponent<RawImage>();
-        image.color = new Color(image.color.r, image.color.g, image.color.b, start ? 1 : 0);
+        renderer = GetComponent<Renderer>();
         fading = start;
-        if(fading) timer = fadeIn ? 1 : 0;
+        if(fading) timer = fadeIn ? 2 : 0;
     }
 
     private void Update()
@@ -32,17 +31,17 @@ public class FadeInOut : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            if(timer >= 1) fading = false;
+            if(timer >= 2) fading = false;
         }
 
-        image.color = new Color(image.color.r, image.color.g, image.color.b, timer);
+        renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, timer);
     }
 
     public void FadeIn()
     {
         fadeIn = true;
         fading = true;
-        timer = 1;
+        timer = 2;
     }
 
     public void FadeOut()

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Play : MonoBehaviour
 {
     public FadeInOut fadeInOut;
-    private float timer = 1.5f;
+    private float timer = 2.5f;
     private bool started = false;
 
     public void StartGame()
