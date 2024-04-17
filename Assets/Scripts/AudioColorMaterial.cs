@@ -6,9 +6,11 @@ public class AudioColorMaterial : MonoBehaviour
 {
     public Color silentColor = Color.white;
     public Color loudColor = Color.red;
+    public Color awaitingColor = Color.yellow;
     public float loudness = 0.5f;
     public float sensitivity = 100;
     public float colorLerpSpeed = 10;
+    public bool isAwaiting = false;
 
     private Material material;
     private AudioSource audioSource;
@@ -24,6 +26,13 @@ public class AudioColorMaterial : MonoBehaviour
 
     private void Update()
     {
+        if(isAwaiting)
+        {
+            material.color = Color.Lerp(material.color, awaitingColor, Time.deltaTime * colorLerpSpeed);
+            actualSize = Mathf.Lerp(actualSize, silentSize, Time.deltaTime * colorLerpSpeed);
+            return;
+        }
+
         float[] spectrum = new float[256];
         audioSource.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
 

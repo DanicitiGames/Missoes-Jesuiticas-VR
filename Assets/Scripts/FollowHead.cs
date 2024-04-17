@@ -5,16 +5,13 @@ using UnityEngine;
 public class FollowHead : MonoBehaviour
 {
     public GameObject head;
+    public bool lockY = false;
     private void Update()
     {
         Vector3 position = transform.position;
         position.y = head.transform.position.y;
-        transform.position = position;
-        // Quaternion rotation = transform.rotation;
-        // faça a logica do looking at
+        if(!lockY) transform.position = position;
         transform.LookAt(head.transform);
-        // está invertido, então vamos corrigir
         transform.Rotate(0, 180, 0);
-
     }
 }
