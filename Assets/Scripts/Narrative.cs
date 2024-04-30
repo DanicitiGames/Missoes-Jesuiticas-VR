@@ -13,7 +13,7 @@ public class Narrative : MonoBehaviour
     private float timer = 0f;
 
     public GameObject stage1Object;
-    public AudioColorMaterial audioColorMaterial;
+    public AudioDetector audioColorMaterial;
     public HeadNodVerifier headNodVerifier;
 
     private void Start()
