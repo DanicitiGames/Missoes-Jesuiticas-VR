@@ -38,6 +38,7 @@ public class AudioDetector : MonoBehaviour
             loudness = 1;
         }
 
+        blendShapeProxy.SetValue(BlendShapePreset.Fun, 0.3f);
         blendShapeProxy.SetValue(BlendShapePreset.A, loudness);
     }
 }
