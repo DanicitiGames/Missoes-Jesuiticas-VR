@@ -3,7 +3,12 @@ guid: 64e4c6f3ce968d24f97f84f480d12c0b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PedraCruz
+    second: {fileID: 2100000, guid: bb48bc269ef483f41bdd03fb5dbfafdf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
