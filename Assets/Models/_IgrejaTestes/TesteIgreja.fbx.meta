@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RockGround
+    second: {fileID: 2100000, guid: 499206f382e543144b4da79737610475, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Sino
     second: {fileID: 2100000, guid: b931ca68a658e5f4fa91304f354bf26f, type: 2}
   - first:
