@@ -196,7 +196,7 @@ Material:
     - _CustomLightDirectionFollowObjectRotation: 0
     - _CustomLightDirectionIntensity: 0
     - _Cutoff: 0.5
-    - _Cutout: 0.4
+    - _Cutout: 0.46
     - _DebugMode: 0
     - _DepthThreshold: 900
     - _DirectionalLightIntensity: 0
