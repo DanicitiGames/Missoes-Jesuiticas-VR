@@ -3,7 +3,28 @@ guid: 193205dc271bcca4a934e3ae2032b6ba
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clay
+    second: {fileID: -876546973899608171, guid: 0063c8634529c1a4b889cb0a510655bb,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather
+    second: {fileID: 2100000, guid: 05337cdb9ad83fe4caa068ae2d5c9266, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof
+    second: {fileID: 2100000, guid: 66ec1478a0b21724196b0641629eead7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rope
+    second: {fileID: 2100000, guid: f94c42c4e47fa1b4084b52c771e3994f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

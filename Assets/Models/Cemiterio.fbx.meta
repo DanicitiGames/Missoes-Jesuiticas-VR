@@ -3,7 +3,29 @@ guid: 4fc9edbea49097d46b4c75b8c2c6753d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arcos
+    second: {fileID: 2100000, guid: 1739a7ac0ffde03439a513121b6fcc5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clay
+    second: {fileID: -876546973899608171, guid: 0063c8634529c1a4b889cb0a510655bb,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Terracota
+    second: {fileID: 2100000, guid: aeb118c5546801f4f9df46c850d73cfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.002
+    second: {fileID: -1444460858095362738, guid: bb43dcf7b923dc34c9a391e5877ebff0,
+      type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
