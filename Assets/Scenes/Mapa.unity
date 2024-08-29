@@ -19115,7 +19115,7 @@ PrefabInstance:
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79335415
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
@@ -19125,7 +19125,7 @@ PrefabInstance:
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6087605
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
@@ -19140,7 +19140,7 @@ PrefabInstance:
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
@@ -22889,7 +22889,7 @@ PrefabInstance:
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5000018
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
@@ -22899,7 +22899,7 @@ PrefabInstance:
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.86602443
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
@@ -22914,7 +22914,7 @@ PrefabInstance:
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4958814026324970630, guid: 865c9242b24e1b543bc4cbb00fe05810,
         type: 3}
@@ -33129,7 +33129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972683193}
   m_Layer: 0
-  m_Name: Borda
+  m_Name: borda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
