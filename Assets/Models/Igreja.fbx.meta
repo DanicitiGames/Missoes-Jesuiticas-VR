@@ -3,7 +3,80 @@ guid: bb43dcf7b923dc34c9a391e5877ebff0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arcos
+    second: {fileID: 2100000, guid: 1e32ae544dce85f4585eea8f677314f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackInside
+    second: {fileID: 2100000, guid: 42090562ebf634f49b68de25d34c1ae2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clay
+    second: {fileID: -876546973899608171, guid: 0063c8634529c1a4b889cb0a510655bb,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mureta
+    second: {fileID: 2100000, guid: 462f3f4e9ea28484dab02c0d1e3ac711, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pilastra
+    second: {fileID: 2100000, guid: 462f3f4e9ea28484dab02c0d1e3ac711, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RockGround.001
+    second: {fileID: 3731384425781946589, guid: fe9d01b2bc952b04dbc2300fe8d76e42,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RockGround.002
+    second: {fileID: 3731384425781946589, guid: fe9d01b2bc952b04dbc2300fe8d76e42,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sino
+    second: {fileID: 2100000, guid: b931ca68a658e5f4fa91304f354bf26f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Terracota
+    second: {fileID: 2100000, guid: aeb118c5546801f4f9df46c850d73cfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 798fc5408f06b9f4ba1f3d86a4a610c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mosslighter
+    second: {fileID: 2100000, guid: ed92d8328e97d6945a019662259c5112, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pngwing.com(18)
+    second: {fileID: 2100000, guid: 1820ef2fb4245fd4eb35a05c0dbde5dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u2014Pngtree\u2014artistic dirty grunge textures_6614828"
+    second: {fileID: 2100000, guid: ed92d8328e97d6945a019662259c5112, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u2014Pngtree\u2014wall crack effect_1899077"
+    second: {fileID: 2100000, guid: 856df1691bf2d3344a0c54fd4d01b8c8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

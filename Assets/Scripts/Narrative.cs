@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Narrative : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Narrative : MonoBehaviour
     public GameObject stage1Object;
     public AudioDetector audioColorMaterial;
     public HeadNodVerifier headNodVerifier;
+
+    public UnityEvent[] CallOnEndTalk;
 
     private void Start()
     {
@@ -44,7 +47,17 @@ public class Narrative : MonoBehaviour
         }
         if (stage == 2 && timer <= 0)
         {
-            if(index <= audioClips.Length - 1) NextClip();
+            if(index <= audioClips.Length - 1)
+            {
+                NextClip();
+            }
+            else
+            {
+                foreach(var function in CallOnEndTalk)
+                {
+                    function?.Invoke();
+                }
+            }
         }
     }
 

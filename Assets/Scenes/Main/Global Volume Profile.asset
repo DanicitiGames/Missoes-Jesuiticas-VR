@@ -63,9 +63,7 @@ MonoBehaviour:
   - {fileID: -6518319233113085565}
   - {fileID: 4319633552547775519}
   - {fileID: 5300826982766188294}
-  - {fileID: -1730532070972546393}
   - {fileID: 4137536531632448062}
-  - {fileID: -8320119792547022950}
 --- !u!114 &4137536531632448062
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -81,7 +79,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.5
   contrast:
     m_OverrideState: 1
     m_Value: 0
