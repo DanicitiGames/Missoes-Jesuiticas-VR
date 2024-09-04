@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mureta
-    second: {fileID: 2100000, guid: 1739a7ac0ffde03439a513121b6fcc5f, type: 2}
+    second: {fileID: 2100000, guid: 1e32ae544dce85f4585eea8f677314f8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
