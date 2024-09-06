@@ -8,8 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Clay
-    second: {fileID: -876546973899608171, guid: 0063c8634529c1a4b889cb0a510655bb,
-      type: 3}
+    second: {fileID: 2100000, guid: 36ba5cc18c4d96349a595f21a3edcb9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground
+    second: {fileID: 2100000, guid: 19afed9aa37be0a41a70a4647346ce09, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

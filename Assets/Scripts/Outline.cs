@@ -28,4 +28,9 @@ public class Outline : MonoBehaviour
             material.SetColor("_OutlineColor", isOutline ? outlineOn : outlineOff);
         }
     }
+
+    public void ToggleOutline(bool value)
+    {
+        isOutline = value;
+    }
 }
