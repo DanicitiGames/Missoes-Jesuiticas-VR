@@ -7,6 +7,7 @@ public class FadeInOut : MonoBehaviour
 {
     public bool start = true;
     public bool fadeIn = true;
+    private bool fadeInAndOut = false;
     
     private Renderer renderer;
     private float timer = 0;
@@ -27,6 +28,11 @@ public class FadeInOut : MonoBehaviour
         {
             timer -= Time.deltaTime;
             if(timer <= 0) fading = false;
+            if (fadeInAndOut)
+            {
+                fadeInAndOut = false;
+                FadeOut();
+            }
         }
         else
         {
@@ -49,5 +55,11 @@ public class FadeInOut : MonoBehaviour
         fadeIn = false;
         fading = true;
         timer = 0;
+    }
+
+    public void FadeInAndOut()
+    {
+        fadeInAndOut |= true;
+        FadeIn();
     }
 }

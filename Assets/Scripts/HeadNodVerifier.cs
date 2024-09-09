@@ -31,7 +31,7 @@ public class HeadNodVerifier : MonoBehaviour
             cooldown = 2f;
         }
 
-        Debug.Log("up: " + up + " down: " + down + " rotation: " + head.rotation.x*180);
+        //Debug.Log("up: " + up + " down: " + down + " rotation: " + head.rotation.x*180);
 
         if(up && down) isNodding = true;
         else isNodding = false;

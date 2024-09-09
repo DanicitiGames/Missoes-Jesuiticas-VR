@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Narrative : MonoBehaviour
 {
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     public AudioClip[] audioClips;
     public float timeBetweenClips = 1;
     public float timeBeforeStart = 3;
@@ -13,6 +13,7 @@ public class Narrative : MonoBehaviour
     private int stage = 0;
     private float timer = 0f;
 
+    [SerializeField] private bool hasConfirmation = false;
     public GameObject stage1Object;
     public AudioDetector audioColorMaterial;
     public HeadNodVerifier headNodVerifier;
@@ -22,20 +23,29 @@ public class Narrative : MonoBehaviour
     private void Start()
     {
         timer = timeBeforeStart;
-        audioSource = GetComponent<AudioSource>();
+        if(!audioSource) audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
+        print(transform.name);
         timer -= Time.deltaTime;
         if (stage == 0 && timer <= 0)
         {
             if(index != 1) NextClip();
             else 
             {
-                audioColorMaterial.isAwaiting = true;
-                stage1Object.SetActive(true);
-                stage = 1;
+                if (hasConfirmation)
+                {
+                    audioColorMaterial.isAwaiting = true;
+                    stage1Object.SetActive(true);
+                    stage = 1;
+                }
+                else
+                {
+                    stage = 2;
+                    NextClip();
+                }
             }
         }
         if (stage == 1 && headNodVerifier.isNodding)
@@ -47,7 +57,7 @@ public class Narrative : MonoBehaviour
         }
         if (stage == 2 && timer <= 0)
         {
-            if(index <= audioClips.Length - 1)
+            if(index < audioClips.Length - 1)
             {
                 NextClip();
             }
@@ -64,6 +74,7 @@ public class Narrative : MonoBehaviour
     private void NextClip()
     {
         index++;
+        print(audioClips[index]);
         audioSource.clip = audioClips[index];
         audioSource.Play();
         timer = audioClips[index].length;

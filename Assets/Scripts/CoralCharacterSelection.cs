@@ -4,27 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class CoralCharacterSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class CoralCharacterSelection : MonoBehaviour
 {
-    public UnityEvent[] CallOnSelected;
-    public UnityEvent[] CallOnUnselected;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] coralAudioClips;
 
-    void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
+    public void SelectKidToSing(int index)
     {
-        print("Selected character " + transform.name);
-        foreach (var function in CallOnSelected)
-        {
-            function?.Invoke();
-        }
-    }
-
-    /// <inheritdoc />
-    void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
-    {
-        print("Unselected character " + transform.name);
-        foreach (var function in CallOnUnselected)
-        {
-            function?.Invoke();
-        }
+        audioSource.clip = coralAudioClips[index];
+        audioSource.Play();
     }
 }
