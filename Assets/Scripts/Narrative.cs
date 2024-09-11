@@ -28,7 +28,6 @@ public class Narrative : MonoBehaviour
 
     private void Update()
     {
-        print(transform.name);
         timer -= Time.deltaTime;
         if (stage == 0 && timer <= 0)
         {
@@ -67,6 +66,7 @@ public class Narrative : MonoBehaviour
                 {
                     function?.Invoke();
                 }
+                this.enabled = false;
             }
         }
     }
@@ -74,7 +74,6 @@ public class Narrative : MonoBehaviour
     private void NextClip()
     {
         index++;
-        print(audioClips[index]);
         audioSource.clip = audioClips[index];
         audioSource.Play();
         timer = audioClips[index].length;

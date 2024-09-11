@@ -17,7 +17,7 @@ public class FadeInOut : MonoBehaviour
     {
         renderer = GetComponent<Renderer>();
         fading = start;
-        if(fading) timer = fadeIn ? 2 : 0;
+        if(fading) timer = fadeIn ? 1 : 0;
     }
 
     private void Update()
@@ -28,26 +28,28 @@ public class FadeInOut : MonoBehaviour
         {
             timer -= Time.deltaTime;
             if(timer <= 0) fading = false;
-            if (fadeInAndOut)
-            {
-                fadeInAndOut = false;
-                FadeOut();
-            }
+            
         }
         else
         {
             timer += Time.deltaTime;
             if(timer >= 2) fading = false;
+            
+            if (!fading && fadeInAndOut)
+            {
+                fadeInAndOut = false;
+                FadeIn();
+            }
         }
 
-        renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, timer);
+        renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, timer * 2);
     }
 
     public void FadeIn()
     {
         fadeIn = true;
         fading = true;
-        timer = 2;
+        timer = 1;
     }
 
     public void FadeOut()
@@ -59,7 +61,7 @@ public class FadeInOut : MonoBehaviour
 
     public void FadeInAndOut()
     {
-        fadeInAndOut |= true;
-        FadeIn();
+        fadeInAndOut = true;
+        FadeOut();
     }
 }

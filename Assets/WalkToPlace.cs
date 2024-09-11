@@ -28,6 +28,7 @@ public class WalkToPlace : MonoBehaviour
         else
         {
             if (animator != null) animator.SetBool("isWalking", false);
+            this.enabled = false;
         }
     }
 }
