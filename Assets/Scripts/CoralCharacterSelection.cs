@@ -60,6 +60,7 @@ public class CoralCharacterSelection : MonoBehaviour
         currentKidSinging.gameObject.GetComponent<Animator>().SetBool("isSinging", false);
         currentKidSinging.gameObject.GetComponent<Outline>().isOutline = false;
         currentKidSinging = null;
+        singTween = null;
     }
 
     public void EnableInteractionWithCoral()
@@ -103,6 +104,13 @@ public class CoralCharacterSelection : MonoBehaviour
         {
             kid.gameObject.GetComponent<Animator>().SetBool("isSinging", false);
             kid.gameObject.GetComponent<Outline>().isOutline = false;
+            kid.gameObject.GetComponent<AudioSource>().Stop();
+
+            if(singTween != null)
+            {
+                LeanTween.cancel(singTween.id);
+            }
         }
+
     }
 }

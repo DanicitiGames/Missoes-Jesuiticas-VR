@@ -249,7 +249,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineLightingMix: 1
     - _OutlineScaledMaxDistance: 4.63
-    - _OutlineWidth: 0.16
+    - _OutlineWidth: 0.08
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineWidthMode: 1
     - _OutlineZPostionInCamera: 0
@@ -324,7 +324,7 @@ Material:
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0.504717, g: 0.7765885, b: 1, a: 1}
+    - _OutlineColor: {r: 0.27450982, g: 0.08627451, b: 0.1254902, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0.93823904, g: 0.65896195, b: 0.73757786, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}

@@ -18,6 +18,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RockGround
+    second: {fileID: 2100000, guid: 499206f382e543144b4da79737610475, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Terracota
     second: {fileID: 2100000, guid: aeb118c5546801f4f9df46c850d73cfd, type: 2}
   - first:
