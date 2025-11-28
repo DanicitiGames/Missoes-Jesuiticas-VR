@@ -2926,6 +2926,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8fcdae9ba64330c46ae75b1b02c0d04c, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -5428,6 +5429,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 511bcd633230c4843b90c363d226b7c4, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.5
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 1
   stage1Object: {fileID: 2046292916}
   audioColorMaterial: {fileID: 285826266}
@@ -7990,6 +7992,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3ca6ea2777a0f79459db014d321b2c88, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.5
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 2046292916}
   audioColorMaterial: {fileID: 1383736583}
@@ -8672,6 +8675,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c743eb8cadda9dc47989725f3b0a6f65, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 1.5
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 2046292916}
   audioColorMaterial: {fileID: 1383736583}
@@ -9207,7 +9211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525392070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09d98cbfb1472d14b8acd20d97119cb8, type: 3}
   m_Name: 
@@ -9639,6 +9643,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d561effd78d68724d8cec5194b140e84, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.5
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 2046292916}
   audioColorMaterial: {fileID: 1383736583}
@@ -9836,6 +9841,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c71e41edddb7d314aa044f54804a664a, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -13424,6 +13430,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 96cf26ab1c8507344b4a2f9f607aab2e, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -14174,6 +14181,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0cdba4485850d4649b1d3bdc96af9d2e, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 2
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -15801,6 +15809,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f66cd86b41ec6d341b40668c5f93f236, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -16637,6 +16646,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a10c09f6e06888d41acd410d6f020c1b, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -17168,6 +17178,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ecede900c64361b48b30bb0de7624008, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -17920,6 +17931,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0b43a027831b20245a317c247beb304f, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -18291,6 +18303,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4a0a53a4d18b44a4bbda5d2f52ec54c2, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -19261,6 +19274,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c5005aadb9e84ef4ca1bab2e7e675531, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -25016,6 +25030,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 88263fa0980c3bb48a1eb0403adef175, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.8
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 0}
   audioColorMaterial: {fileID: 277315573}
@@ -26043,6 +26058,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c042088794b86aa4eac65487b054d879, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 2
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 2046292916}
   audioColorMaterial: {fileID: 1383736583}
@@ -31575,6 +31591,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b0f9a842266fd5c41ba7dd021763a59a, type: 3}
   timeBetweenClips: 1
   timeBeforeStart: 0.5
+  subtitleManager: {fileID: 525392071}
   hasConfirmation: 0
   stage1Object: {fileID: 2046292916}
   audioColorMaterial: {fileID: 285826266}
@@ -33135,7 +33152,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 67.78772, y: -8.543655, z: 67.78784, w: 124.27042}
+  m_margin: {x: 67.78772, y: -118.222336, z: 67.78784, w: 124.27042}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
