@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.41023415, g: 0.44321942, b: 0.5091899, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientIntensity: 1.67
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2777b14768e6bc2458ebe30c7843f22e, type: 2}
   m_HaloStrength: 0.5
@@ -321,8 +321,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20615892}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.4142399, z: -0, w: 0.91016775}
-  m_LocalPosition: {x: 106.47099, y: 0, z: -15.762001}
+  m_LocalRotation: {x: -0, y: 0.6115178, z: -0, w: 0.7912307}
+  m_LocalPosition: {x: 106.06, y: 0, z: -14.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -331,7 +331,7 @@ Transform:
   - {fileID: 1652197901}
   - {fileID: 1942865782}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 48.943, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 75.399, z: 0}
 --- !u!1001 &21103868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12111,6 +12111,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4167087918201599186, guid: bb43dcf7b923dc34c9a391e5877ebff0,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 462f3f4e9ea28484dab02c0d1e3ac711, type: 2}
+    - target: {fileID: -4029301769525391131, guid: bb43dcf7b923dc34c9a391e5877ebff0,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 462f3f4e9ea28484dab02c0d1e3ac711, type: 2}
     - target: {fileID: 919132149155446097, guid: bb43dcf7b923dc34c9a391e5877ebff0,
         type: 3}
       propertyPath: m_Name
@@ -35734,7 +35744,7 @@ PrefabInstance:
     - target: {fileID: 1178791450436251564, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
       propertyPath: m_RequestedTrackingOriginMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0,
         type: 3}
