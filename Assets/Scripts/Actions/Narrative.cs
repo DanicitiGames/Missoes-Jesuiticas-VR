@@ -19,12 +19,16 @@ public class Narrative : MonoBehaviour
     public AudioDetector audioColorMaterial;
     public HeadNodVerifier headNodVerifier;
 
+    [SerializeField] private AudioClip[] tooltipTriggerAudio;
+    [SerializeField] private GameObject[] tooltips;
+    private int currentTooltipIndex = -1;
+
     public UnityEvent[] CallOnEndTalk;
 
     private void Start()
     {
         timer = timeBeforeStart;
-        if(!audioSource) audioSource = GetComponent<AudioSource>();
+        if (!audioSource) audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -38,7 +42,7 @@ public class Narrative : MonoBehaviour
                 return;
             }
             if (index != 1) NextClip();
-            else 
+            else
             {
                 if (hasConfirmation)
                 {
@@ -62,7 +66,7 @@ public class Narrative : MonoBehaviour
         }
         if (stage == 2 && timer <= 0)
         {
-            if(index < audioClips.Length -1)
+            if (index < audioClips.Length - 1)
             {
                 NextClip();
             }
@@ -78,43 +82,87 @@ public class Narrative : MonoBehaviour
         foreach (var function in CallOnEndTalk)
         {
             function?.Invoke();
-            //subtitleManager.ClearSubtitle();
         }
         this.enabled = false;
     }
 
+    private void HandleTooltip(AudioClip currentClip)
+    {
+        if (tooltipTriggerAudio == null || tooltips == null) return;
+        if (tooltipTriggerAudio.Length == 0 || tooltips.Length == 0) return;
+
+        int newIndex = System.Array.IndexOf(tooltipTriggerAudio, currentClip);
+
+        if (newIndex < 0 || newIndex >= tooltips.Length)
+        {
+            CloseCurrentTooltip();
+            return;
+        }
+
+        if (newIndex == currentTooltipIndex)
+            return;
+
+        CloseCurrentTooltip();
+
+        if (tooltips[newIndex] != null)
+        {
+            tooltips[newIndex].SetActive(true);
+            currentTooltipIndex = newIndex;
+        }
+    }
+
+    public void CloseTooltipByButton()
+    {
+        CloseCurrentTooltip();
+    }
+
+    private void CloseCurrentTooltip()
+    {
+        if (currentTooltipIndex >= 0 &&
+            currentTooltipIndex < tooltips.Length &&
+            tooltips[currentTooltipIndex] != null)
+        {
+            tooltips[currentTooltipIndex].SetActive(false);
+        }
+
+        currentTooltipIndex = -1;
+    }
+
     private void NextClip()
-{
-    index++;
-    print("Index: " + index + " audio clip length: " + (audioClips.Length));
+    {
 
-    AudioClip clip = audioClips[index];
+        index++;
+        print("Index: " + index + " audio clip length: " + (audioClips.Length));
 
-    audioSource.clip = clip;
-    audioSource.Play();
+        AudioClip clip = audioClips[index];
 
-    // CHAMA O SUBTITLE MANAGER
-    if (subtitleManager != null)
-        subtitleManager.ShowSubtitleForClip(clip, clip.length);
+        audioSource.clip = clip;
+        audioSource.Play();
 
-    timer = clip.length;
-    if(index != 1)
-        timer += timeBetweenClips;
-}
+        // CHAMA O SUBTITLE MANAGER
+        if (subtitleManager != null)
+            subtitleManager.ShowSubtitleForClip(clip, clip.length);
+
+        timer = clip.length;
+        if (index != 1)
+            timer += timeBetweenClips;
+
+        HandleTooltip(audioSource.clip);
+    }
 
     private string LoadSubtitleForClip(AudioClip clip)
-{
-    if (clip == null) return null;
+    {
+        if (clip == null) return null;
 
-    // Nome do arquivo igual ao nome do áudio
-    string subtitlePath = "Subtitles/" + clip.name;
+        // Nome do arquivo igual ao nome do áudio
+        string subtitlePath = "Subtitles/" + clip.name;
 
-    // Carrega o arquivo .txt da pasta Resources/Subtitles
-    TextAsset textFile = Resources.Load<TextAsset>(subtitlePath);
+        // Carrega o arquivo .txt da pasta Resources/Subtitles
+        TextAsset textFile = Resources.Load<TextAsset>(subtitlePath);
 
-    if (textFile != null)
-        return textFile.text;
-    else
-        return null;
-}
+        if (textFile != null)
+            return textFile.text;
+        else
+            return null;
+    }
 }
