@@ -104,6 +104,7 @@ public class Narrative : MonoBehaviour
     public AudioClip[] audioClips;
     public float timeBetweenClips = 1;
     public float timeBeforeStart = 3;
+    public SubtitleManager subtitleManager;
     private int index = -1;
     private int stage = 0;
     private float timer = 0f;
@@ -227,10 +228,36 @@ public class Narrative : MonoBehaviour
 
         index++;
         print("Index: " + index + " audio clip length: " + (audioClips.Length));
-        audioSource.clip = audioClips[index];
+
+        AudioClip clip = audioClips[index];
+
+        audioSource.clip = clip;
         audioSource.Play();
-        timer = audioClips[index].length;
-        if (index != 1) timer += timeBetweenClips;
+
+        // CHAMA O SUBTITLE MANAGER
+        if (subtitleManager != null)
+            subtitleManager.ShowSubtitleForClip(clip, clip.length);
+
+        timer = clip.length;
+        if (index != 1)
+            timer += timeBetweenClips;
+
         HandleTooltip(audioSource.clip);
+    }
+
+    private string LoadSubtitleForClip(AudioClip clip)
+    {
+        if (clip == null) return null;
+
+        // Nome do arquivo igual ao nome do áudio
+        string subtitlePath = "Subtitles/" + clip.name;
+
+        // Carrega o arquivo .txt da pasta Resources/Subtitles
+        TextAsset textFile = Resources.Load<TextAsset>(subtitlePath);
+
+        if (textFile != null)
+            return textFile.text;
+        else
+            return null;
     }
 }
