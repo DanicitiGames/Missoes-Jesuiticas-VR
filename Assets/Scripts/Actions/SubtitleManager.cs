@@ -11,12 +11,20 @@ public class SubtitleManager : MonoBehaviour
     [Tooltip("Se > 0, limpa automaticamente após esse tempo. Se 0, usa duration passado em ShowSubtitleForClip.")]
     public float defaultAutoClearTime = 0f;
 
+    [Header("Cores por personagem")]
+    public Color apoenaColor = new Color(1f, 0.811f, 0.902f);
+    public Color padreColor = new Color(0.6f, 1f, 0.6f); 
+    public Color defaultColor = Color.white;
+
     private Coroutine clearRoutine;
 
     private void Awake()
     {
         if (subtitleText != null)
+        {
             subtitleText.text = "";
+            subtitleText.color = defaultColor;
+        }
     }
 
     public void ShowSubtitle(string text)
@@ -41,7 +49,16 @@ public class SubtitleManager : MonoBehaviour
     public void ClearSubtitle()
     {
         if (clearRoutine != null) { StopCoroutine(clearRoutine); clearRoutine = null; }
-        if (subtitleText != null) subtitleText.text = "";
+        if (subtitleText != null)
+        {
+            subtitleText.text = "";
+            subtitleText.color = defaultColor;
+        }
+    }
+
+    // Mantive o método vazio original caso queira reutilizar
+    public void subtitleColor(){
+        
     }
 
     private IEnumerator AutoClear(float time)
@@ -76,6 +93,9 @@ public class SubtitleManager : MonoBehaviour
             return;
         }
 
+        
+        ApplySubtitleColorByFilename(clip.name);
+
         float durationToUse = 0f;
         if (durationForClear > 0f) durationToUse = durationForClear;
         else if (defaultAutoClearTime > 0f) durationToUse = defaultAutoClearTime;
@@ -87,5 +107,30 @@ public class SubtitleManager : MonoBehaviour
             ShowSubtitle(subtitle); 
 
         Debug.Log($"SubtitleManager: mostrando legenda para '{clip.name}' (duração auto-clear: {durationToUse}s).");
+    }
+
+    private void ApplySubtitleColorByFilename(string filename)
+    {
+        if (subtitleText == null) return;
+        if (string.IsNullOrEmpty(filename))
+        {
+            subtitleText.color = defaultColor;
+            return;
+        }
+
+        string lower = filename.ToLowerInvariant();
+
+        if (lower.StartsWith("apoena"))
+        {
+            subtitleText.color = apoenaColor;
+        }
+        else if (lower.StartsWith("padre"))
+        {
+            subtitleText.color = padreColor;
+        }
+        else
+        {
+            subtitleText.color = defaultColor;
+        }
     }
 }

@@ -20326,6 +20326,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 1736847709}
   defaultAutoClearTime: 0
+  apoenaColor: {r: 0.3066038, g: 0.77254903, b: 1, a: 1}
+  padreColor: {r: 0.6, g: 1, b: 0.6, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &976077396
 Transform:
   m_ObjectHideFlags: 0
@@ -24239,7 +24242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232321057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
   m_Name: 
@@ -24298,7 +24301,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232321057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
