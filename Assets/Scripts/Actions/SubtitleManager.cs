@@ -7,6 +7,9 @@ public class SubtitleManager : MonoBehaviour
     [Header("Referências")]
     public TextMeshProUGUI subtitleText;
 
+    public bool subtitlesEnabled = false;
+
+
     [Header("Configurações")]
     [Tooltip("Se > 0, limpa automaticamente após esse tempo. Se 0, usa duration passado em ShowSubtitleForClip.")]
     public float defaultAutoClearTime = 0f;
@@ -70,6 +73,12 @@ public class SubtitleManager : MonoBehaviour
 
     public void ShowSubtitleForClip(AudioClip clip, float durationForClear = -1f)
     {
+        if (!subtitlesEnabled)
+        {
+            ClearSubtitle();
+            return;
+        }
+
         if (clip == null)
         {
             Debug.LogWarning("SubtitleManager: clip é nulo.");
