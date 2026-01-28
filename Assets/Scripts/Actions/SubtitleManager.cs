@@ -7,7 +7,7 @@ public class SubtitleManager : MonoBehaviour
     [Header("Referências")]
     public TextMeshProUGUI subtitleText;
 
-    public bool subtitlesEnabled = false;
+    public bool subtitlesEnabled = true;
 
 
     [Header("Configurações")]
@@ -22,32 +22,50 @@ public class SubtitleManager : MonoBehaviour
     private Coroutine clearRoutine;
 
     private void Awake()
+{
+    subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
+
+    if (subtitleText != null)
     {
-        if (subtitleText != null)
-        {
-            subtitleText.text = "";
-            subtitleText.color = defaultColor;
-        }
+        subtitleText.text = "";
+        subtitleText.color = defaultColor;
     }
+
+    Debug.Log("Subtitles enabled: " + subtitlesEnabled);
+}
+
 
     public void ShowSubtitle(string text)
+{
+    if (!subtitlesEnabled)
     {
-        if (clearRoutine != null) StopCoroutine(clearRoutine);
-
-        if (subtitleText != null)
-            subtitleText.text = text;
+        ClearSubtitle();
+        return;
     }
+
+    if (clearRoutine != null) StopCoroutine(clearRoutine);
+
+    if (subtitleText != null)
+        subtitleText.text = text;
+}
+
 
     public void ShowSubtitle(string text, float duration)
+{
+    if (!subtitlesEnabled)
     {
-        if (clearRoutine != null) StopCoroutine(clearRoutine);
-
-        if (subtitleText != null)
-            subtitleText.text = text;
-
-        if (duration > 0f)
-            clearRoutine = StartCoroutine(AutoClear(duration));
+        ClearSubtitle();
+        return;
     }
+
+    if (clearRoutine != null) StopCoroutine(clearRoutine);
+
+    if (subtitleText != null)
+        subtitleText.text = text;
+
+    if (duration > 0f)
+        clearRoutine = StartCoroutine(AutoClear(duration));
+}
 
     public void ClearSubtitle()
     {

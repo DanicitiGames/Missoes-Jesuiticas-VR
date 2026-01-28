@@ -3,31 +3,34 @@ using TMPro;
 
 public class SubtitleToggleButton : MonoBehaviour
 {
-    public SubtitleManager subtitleManager;
+    [Header("References")]
     public TextMeshProUGUI buttonText;
 
     private void Start()
     {
-        UpdateButtonText();
+        bool enabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
+        UpdateButtonText(enabled);
     }
 
     public void ToggleSubtitles()
     {
-        if (subtitleManager == null) return;
+        bool current = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
+        bool next = !current;
 
-        subtitleManager.subtitlesEnabled = !subtitleManager.subtitlesEnabled;
-        UpdateButtonText();
+        PlayerPrefs.SetInt("SubtitlesEnabled", next ? 1 : 0);
+        PlayerPrefs.Save();
 
-        Debug.Log("Legendas: " + (subtitleManager.subtitlesEnabled ? "ON" : "OFF"));
+        UpdateButtonText(next);
+
+        Debug.Log("Legendas agora estão: " + (next ? "LIGADAS" : "DESLIGADAS"));
     }
 
-    private void UpdateButtonText()
+    private void UpdateButtonText(bool enabled)
     {
-        if (buttonText == null || subtitleManager == null) return;
+        if (buttonText == null) return;
 
-        if (subtitleManager.subtitlesEnabled)
-            buttonText.text = "Desligar Legenda";
-        else
-            buttonText.text = "Ligar Legenda";
+        buttonText.text = enabled
+            ? "Desligar Legenda"
+            : "Ligar Legenda";
     }
 }
