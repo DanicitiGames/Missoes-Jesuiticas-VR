@@ -13,6 +13,11 @@ public class CoralCharacterSelection : MonoBehaviour
 
     private LTDescr singTween = null;
 
+    private Dictionary<GameObject, Vector3> originalPositions = new Dictionary<GameObject, Vector3>();
+
+    [SerializeField] private float stepForwardDistance = 0.25f;
+    [SerializeField] private float stepTweenTime = 0.25f;
+
     private void Start()
     {
         foreach (var kid in kidsToInteract)
@@ -26,31 +31,67 @@ public class CoralCharacterSelection : MonoBehaviour
         }
     }
 
+    public void RegisterCurrentPositions()
+    {
+        originalPositions.Clear();
+
+        foreach (var kid in kidsToInteract)
+        {
+            originalPositions[kid.gameObject] = kid.transform.position;
+        }
+    }
+
     public void SelectKidToSing(AudioSource kidAudioSource)
     {
         var previousKid = currentKidSinging;
         if(currentKidSinging != null) currentKidSinging.Stop();
 
-         currentKidSinging = kidAudioSource;
+        currentKidSinging = kidAudioSource;
 
         if(previousKid != currentKidSinging)
         {
-            currentKidSinging.Play();
-            currentKidSinging.gameObject.GetComponent<Animator>().SetBool("isSinging", true);
-            currentKidSinging.gameObject.GetComponent<Outline>().isOutline = true;
             if(previousKid != null)
             {
                 LeanTween.cancel(singTween.id);
                 previousKid.gameObject.GetComponent<Animator>().SetBool("isSinging", false);
                 previousKid.gameObject.GetComponent<Outline>().isOutline = false;
+
+                if(originalPositions.ContainsKey(previousKid.gameObject))
+                {
+                    LeanTween.move(previousKid.gameObject,
+                        originalPositions[previousKid.gameObject],
+                        stepTweenTime);
+                }
             }
-           singTween = LeanTween.delayedCall(currentKidSinging.clip.length, DisableKidFeedbackOnEndOfClip);
+
+            currentKidSinging.Play();
+            currentKidSinging.gameObject.GetComponent<Animator>().SetBool("isSinging", true);
+            currentKidSinging.gameObject.GetComponent<Outline>().isOutline = true;
+
+            if(originalPositions.ContainsKey(currentKidSinging.gameObject))
+            {
+                Vector3 forwardStep =
+                    originalPositions[currentKidSinging.gameObject] +
+                    currentKidSinging.transform.forward * stepForwardDistance;
+
+                LeanTween.move(currentKidSinging.gameObject, forwardStep, stepTweenTime);
+            }
+
+            singTween = LeanTween.delayedCall(currentKidSinging.clip.length, DisableKidFeedbackOnEndOfClip);
         }
         else
         {
             LeanTween.cancel(singTween.id);
             previousKid.gameObject.GetComponent<Outline>().isOutline = false;
             previousKid.gameObject.GetComponent<Animator>().SetBool("isSinging", false);
+
+            if(originalPositions.ContainsKey(previousKid.gameObject))
+            {
+                LeanTween.move(previousKid.gameObject,
+                    originalPositions[previousKid.gameObject],
+                    stepTweenTime);
+            }
+
             currentKidSinging = null;
         }
     }
@@ -59,6 +100,14 @@ public class CoralCharacterSelection : MonoBehaviour
     {
         currentKidSinging.gameObject.GetComponent<Animator>().SetBool("isSinging", false);
         currentKidSinging.gameObject.GetComponent<Outline>().isOutline = false;
+
+        if(originalPositions.ContainsKey(currentKidSinging.gameObject))
+        {
+            LeanTween.move(currentKidSinging.gameObject,
+                originalPositions[currentKidSinging.gameObject],
+                stepTweenTime);
+        }
+
         currentKidSinging = null;
         singTween = null;
     }
@@ -74,6 +123,8 @@ public class CoralCharacterSelection : MonoBehaviour
         {
             outline.enabled = true;
         }
+
+        RegisterCurrentPositions();
     }
 
     public void DisableInteractionWithCoral()
@@ -106,11 +157,17 @@ public class CoralCharacterSelection : MonoBehaviour
             kid.gameObject.GetComponent<Outline>().isOutline = false;
             kid.gameObject.GetComponent<AudioSource>().Stop();
 
+            if(originalPositions.ContainsKey(kid.gameObject))
+            {
+                LeanTween.move(kid.gameObject,
+                    originalPositions[kid.gameObject],
+                    stepTweenTime);
+            }
+
             if(singTween != null)
             {
                 LeanTween.cancel(singTween.id);
             }
         }
-
     }
 }
