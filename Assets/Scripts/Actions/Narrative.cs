@@ -175,4 +175,17 @@ public class Narrative : MonoBehaviour
 
         this.enabled = false;
     }
+
+    private string LoadSubtitleForClip(AudioClip clip)
+    {
+        if (clip == null) return null;
+
+        string subtitlePath = "Subtitles/" + clip.name;
+        TextAsset textFile = Resources.Load<TextAsset>(subtitlePath);
+
+        if (textFile != null)
+            return textFile.text;
+        else
+            return null;
+    }
 }
