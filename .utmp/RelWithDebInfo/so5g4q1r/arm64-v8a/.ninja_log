@@ -1,9 +1,17 @@
 # ninja log v5
 90	4515	8004375299824286	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9d26133f813065c1
+5989	6631	8004375319439955	D:/IC VR/Missoes-Jesuiticas-VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/so5g4q1r/obj/arm64-v8a/libgame.so	95a2f3cd231cd131
 24	4539	8004375299824286	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1686441f18849e1a
-132	4797	8004375302560941	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8ea3d0ec95dfd1f3
 1	5071	8004375305333539	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	15d11bb83da7a85e
+132	4797	8004375302560941	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8ea3d0ec95dfd1f3
 154	5177	8004375305625859	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4c0f3864268f8c92
 66	5582	8004375310764779	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	360b0d488fb92f20
 47	5989	8004375314803793	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9d55c6824973bbc4
-5989	6631	8004375319439955	D:/IC VR/Missoes-Jesuiticas-VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/so5g4q1r/obj/arm64-v8a/libgame.so	95a2f3cd231cd131
+80	3360	8006868276341325	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8ea3d0ec95dfd1f3
+71	3362	8006868276341325	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9d26133f813065c1
+46	3363	8006868276326247	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	1686441f18849e1a
+63	3414	8006868276994558	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4c0f3864268f8c92
+37	3457	8006868277411209	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	15d11bb83da7a85e
+55	3722	8006868280092337	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	360b0d488fb92f20
+17	3765	8006868280500099	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9d55c6824973bbc4
+3766	4501	8006868287091253	D:/IC VR/Missoes-Jesuiticas-VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/so5g4q1r/obj/arm64-v8a/libgame.so	95a2f3cd231cd131
