@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class CoralCharacterSelection : MonoBehaviour
 {
     [SerializeField] private AudioSource currentKidSinging;
-    [SerializeField] private XRSimpleInteractable[] kidsToInteract;
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable[] kidsToInteract;
     [SerializeField] private Outline[] kidsOutline;
 
     private LTDescr singTween = null;

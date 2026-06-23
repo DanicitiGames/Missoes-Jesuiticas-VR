@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class XRGrabInteractableTwoAttach : XRGrabInteractable
+public class XRGrabInteractableTwoAttach : UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
 {
     public Transform leftAttachTransform;
     public Transform rightAttachTransform;

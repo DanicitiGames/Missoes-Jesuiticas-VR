@@ -18,12 +18,12 @@ public class GiveToyToPlayer : MonoBehaviour
     {
         animator.SetBool("isHoldingItem", true);
         instantiatedToy = Instantiate(ToyTransform, HandTransform);
-        instantiatedToy.GetComponent<XRGrabInteractable>().selectEntered.AddListener(PlayerGrabbedItem);
-        instantiatedToy.GetComponent<XRGrabInteractable>().selectExited.AddListener(RemoveItemParent);
+        instantiatedToy.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectEntered.AddListener(PlayerGrabbedItem);
+        instantiatedToy.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectExited.AddListener(RemoveItemParent);
 
         destroyItemTween = LeanTween.delayedCall(timeWaitingToPickItem, () => {
             animator.SetBool("isHoldingItem", false);
-            instantiatedToy.GetComponent<XRGrabInteractable>().selectEntered.RemoveListener(PlayerGrabbedItem);
+            instantiatedToy.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().selectEntered.RemoveListener(PlayerGrabbedItem);
             Destroy(instantiatedToy, timeToGiveItemAnimation);
             this.enabled = false;
         });
