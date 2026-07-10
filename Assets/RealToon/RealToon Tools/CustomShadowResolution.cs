@@ -1,6 +1,5 @@
-﻿//Custom Shadow Resolution
-//MJQStudioWorks
-//2018
+﻿//RealToon - Custom Shadow Resolution
+//©MJQStudioWorks
 
 using System.Collections;
 using System.Collections.Generic;
@@ -19,12 +18,17 @@ namespace RealToon.Script
 
         [Space(10)]
 
+        [SerializeField]
         [Tooltip("Input value")]
         public int Value = 2048;
+
+        [SerializeField]
         [Tooltip("Final Resolution (Value * 2)")]
         public int FinalResolution = 4096;
 
         [Space(10)]
+
+        [SerializeField]
         [Tooltip("Reset to default value")]
         public bool Reset = false;
 

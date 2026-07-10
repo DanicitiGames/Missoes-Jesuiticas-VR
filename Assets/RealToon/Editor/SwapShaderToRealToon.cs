@@ -1,6 +1,5 @@
 //Swap Shader To RealToon
-//MJQStudioWorks
-//2021
+//©MJQStudioWorks
 
 using UnityEngine;
 using UnityEditor;
@@ -42,6 +41,7 @@ namespace RealToon.Tools
         private Texture ShaMetaMap = null;
         private Texture ShaSpecMap = null;
         private Texture ShaMasMa = null;
+        private Texture VRMShaOutWid = null;
 
         private bool Enswap = true;
         private bool SKEmi = false;
@@ -74,6 +74,7 @@ namespace RealToon.Tools
         static Shader ShaRTBIFT;
         static Shader ShaVRM;
         static Shader ShaVRM10;
+        static Shader ShaVRM10URP;
         private string RTShader = "No RealToon Shader In Your Project";
 
         int ToBaInt = 0;
@@ -97,6 +98,7 @@ namespace RealToon.Tools
             ShaRTBIFT = Shader.Find("RealToon/Version 5/Default/Fade Transparency");
             ShaVRM = Shader.Find("VRM/MToon");
             ShaVRM10 = Shader.Find("VRM10/MToon10");
+            ShaVRM10URP = Shader.Find("VRM10/Universal Render Pipeline/MToon10");
 
             SupShaURP = "Supported Unity URP Shaders:\n" +
             "*Complex Lit\n" +
@@ -115,12 +117,13 @@ namespace RealToon.Tools
             "*Standard (Specular setup)\n" +
             "*Unlit/Color\n" +
             "*Unlit/Texture\n" +
-            "*Unlit/Transparent" +
+            "*Unlit/Transparent\n" +
             "*Unlit/Transparent Cutout\n\n";
 
             SupShaVRM = "Supported VRoid|VRM Shaders:\n" +
                         "*VRM\n" +
-                        "*VRM10\n\n";
+                        "*VRM10\n" +
+                        "*VRM10 [URP]\n\n";
 
             InfoString = SupShaVRM;
 
@@ -241,11 +244,11 @@ namespace RealToon.Tools
                         {
                             if (ShaVRM || ShaVRM10)
                             {
-                                if (m.shader.name == "VRM/MToon" || m.shader.name == "VRM10/MToon10")
+                                if (m.shader.name == "VRM/MToon" || m.shader.name == "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                 {
                                     ShaderName = m.shader.name;
 
-                                    if (ShaderName == "VRM10/MToon10")
+                                    if (ShaderName == "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                     {
                                         MatType = m.GetFloat("_AlphaMode");
                                     }
@@ -256,11 +259,12 @@ namespace RealToon.Tools
 
                                     ShaMainTex = m.GetTexture("_MainTex");
                                     ShaNormalMap = m.GetTexture("_BumpMap");
+                                    VRMShaOutWid = m.GetTexture("_OutlineWidthTex");
                                     ShaNormalScale = m.GetFloat("_BumpScale");
                                     ShaColor = m.GetColor("_Color");
                                     VRMShadeColor = m.GetColor("_ShadeColor");
 
-                                    if (ShaderName == "VRM10/MToon10")
+                                    if (ShaderName == "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                     {
                                         CullingMode = m.GetFloat("_DoubleSided");
                                     }
@@ -281,12 +285,12 @@ namespace RealToon.Tools
                                     VRMOutliColor = m.GetColor("_OutlineColor");
 
                                 }
-                                else if (m.shader.name != "VRM/MToon" || m.shader.name != "VRM10/MToon10")
+                                else if (m.shader.name != "VRM/MToon" || m.shader.name != "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                 {
                                     InfoString += "The selected '" + m.name + "' material, shader is not supported.\n '" + m.shader.name + "'\n\n" + SupShaVRM;
                                 }
 
-                                if (ShaderName == "VRM/MToon" || ShaderName == "VRM10/MToon10")
+                                if (ShaderName == "VRM/MToon" || ShaderName == "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                 {
 
                                     if (ShaRTURP)
@@ -313,6 +317,11 @@ namespace RealToon.Tools
                                     }
 
                                     m.SetFloat("_OutlineWidth", 0.12f);
+
+                                    if (VRMShaOutWid != null)
+                                    {
+                                        m.SetTexture("_OutlineWidthControl", VRMShaOutWid);
+                                    }
 
                                     if (ForTrasCuto != true)
                                     {
@@ -545,7 +554,7 @@ namespace RealToon.Tools
 
                                     if (!ShaRTBID)
                                     {
-                                        if (ShaderName == "VRM10/MToon10")
+                                        if (ShaderName == "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                         {
                                             if (CullingMode != 0.0f)
                                             {
@@ -565,7 +574,7 @@ namespace RealToon.Tools
                                     }
                                     else if (ShaRTBID)
                                     {
-                                        if (ShaderName == "VRM10/MToon10")
+                                        if (ShaderName == "VRM10/MToon10" || m.shader.name == "VRM10/Universal Render Pipeline/MToon10")
                                         {
                                             if (CullingMode == 1.0)
                                             {
@@ -1062,7 +1071,9 @@ namespace RealToon.Tools
                                         {
                                             m.EnableKeyword("N_F_SL_ON");
                                             m.SetFloat("_N_F_SL", 1.0f);
-                                            m.SetFloat("_SelfLitPower", 10);
+                                            m.EnableKeyword("N_F_SLMM_ON");
+                                            m.SetFloat("_N_F_SLMM", 1.0f);
+                                            m.SetFloat("_SelfLitPower", 10.0f);
                                             m.SetFloat("_SelfLitIntensity", 1.0f);
                                             m.SetTexture("_MaskSelfLit", ShaEmiMap);
                                             m.SetColor("_SelfLitColor", ShaEmiColor * ShaEmiColor);
@@ -1332,7 +1343,9 @@ namespace RealToon.Tools
                                         {
                                             m.EnableKeyword("N_F_SL_ON");
                                             m.SetFloat("_N_F_SL", 1.0f);
-                                            m.SetFloat("_SelfLitPower", 50);
+                                            m.EnableKeyword("N_F_SLMM_ON");
+                                            m.SetFloat("_N_F_SLMM", 1.0f);
+                                            m.SetFloat("_SelfLitPower", 50.0f);
                                             m.SetFloat("_SelfLitIntensity", 1.0f);
 
                                             if (ShaEmiMap != null)
@@ -1592,7 +1605,9 @@ namespace RealToon.Tools
                                     {
                                         m.EnableKeyword("N_F_SL_ON");
                                         m.SetFloat("_N_F_SL", 1.0f);
-                                        m.SetFloat("_SelfLitPower", 10);
+                                        m.EnableKeyword("N_F_SLMM_ON");
+                                        m.SetFloat("_N_F_SLMM", 1.0f);
+                                        m.SetFloat("_SelfLitPower", 10.0f);
                                         m.SetFloat("_SelfLitIntensity", 1.0f);
                                         m.SetTexture("_MaskSelfLit", ShaEmiMap);
                                         m.SetColor("_SelfLitColor", ShaEmiColor);

@@ -1,6 +1,5 @@
-﻿//Frame By Frame Rendering V1.0.0
-//MJQStudioWorks
-//2018
+﻿//RealToon - Frame By Frame Rendering V1.0.0
+//©MJQStudioWorks
 
 using UnityEngine;
 using System.Collections;
@@ -15,10 +14,13 @@ namespace RealToon.Tools.FrameByFrameRendering
 
         [Space(20)]
 
+        [SerializeField]
         [Tooltip("Current Frame Number")]
         public int FrameNumber = 0;
 
         [Space(5)]
+
+        [SerializeField]
         [Tooltip("Start Render")]
         public bool Render = false;
 
@@ -26,13 +28,18 @@ namespace RealToon.Tools.FrameByFrameRendering
         [Header("(Settings)")]
 
         [Space(5)]
+
+        [SerializeField]
         [Tooltip("Example Path: C:/TheNameOfTheFolder (Default folder name is Rendered Files and it will be created to your unity root project folder if this set to empty.")]
         public string PathFolder = "Rendered Files";
 
+        [SerializeField]
         [Tooltip("PNG File Name")]
         public string PNGFileName = "Frame";
 
         [Space(15)]
+
+        [SerializeField]
         [Tooltip("Render single frame or single image only, For Illustration or Art use.")]
         public bool PictureMode = false;
 
@@ -41,6 +48,7 @@ namespace RealToon.Tools.FrameByFrameRendering
         [Header("(Information [Display Only] )")]
 
         [Space(5)]
+
         [Tooltip("Display the information of the operation or rendering. (Display Only)")]
         public int LastRenderedFrame = 0;
         public string info = string.Empty;

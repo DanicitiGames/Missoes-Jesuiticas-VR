@@ -1,10 +1,13 @@
-
 ==========================================
 Realtoon (Change - Fix Log)
 ==========================================
 v1.0 (2016):
 
 - Initial Release
+
+
+
+
 
 ==========================================
 v1.0.1 (2016):
@@ -16,6 +19,10 @@ v1.0.1 (2016):
 - "FReflection Scale" is removed and changed it to Unity3d's "Tiling - Offset" to control the size.
 - All sliders are now 0 to 1..... values.
 - Some controls are renamed/corrected.
+
+
+
+
 
 ==========================================
 v1.0.2 (2016):
@@ -32,6 +39,10 @@ v1.0.2 (2016):
 ==========================================
 End of Version 1
 ==========================================
+
+
+
+
 
 ==========================================
 Start of Version 2
@@ -55,6 +66,10 @@ Main Texture Color Self Shadow & Self Shadow at View Direction".
 
 (Read "User Guide" for more info about the new controls and new features)
 
+
+
+
+
 ==========================================
 V2.0.1 (Feb 2017)
 
@@ -75,6 +90,10 @@ just like Self Shadow/Shadows & AO.
 - Added one new example scene.
 
 (Read "User Guide" for more info about the new controls and new features)
+
+
+
+
 
 ==========================================
 V2.0.2 (Jun 2017)
@@ -103,6 +122,10 @@ V2.0.2 (Jun 2017)
 ==========================================
 End of Version 2
 ==========================================
+
+
+
+
 
 ==========================================
 Start of Version 3
@@ -154,6 +177,10 @@ New
 End of Version 3
 ==========================================
 
+
+
+
+
 ==========================================
 Start of Version 4
 ==========================================
@@ -190,6 +217,10 @@ V4.0.0 (Jan 2018)
 - Please see or read again User Guide (PDF) for more info about the changes and updates.
 - Also read "[Notes & Tips]" on the User Guide.
 
+
+
+
+
 ==========================================
 V4.0.1 (Jan 2018)
 
@@ -205,6 +236,10 @@ V4.0.1 (Jan 2018)
 [Notes]
 - Please see or read again User Guide (PDF) for more info about the changes and updates.
 - Read also "Change - Fix Log.txt" for previous updates/release notes and changes.
+
+
+
+
 
 ==========================================
 V4.0.2 (Feb 2018)
@@ -249,6 +284,10 @@ this into your current project with realtoon v4.0.1, realtoon v4.0.0 or older re
 - Please see or read again User Guide (PDF) for more info about the new properties, changes and updates.
 - Read also "Change - Fix Log.txt" for previous updates/release notes and changes.
 
+
+
+
+
 ==========================================
 V4.1.2 (March 2018)
 
@@ -265,6 +304,10 @@ V4.1.2 (March 2018)
 [Notes]
 - Please see or read again User Guide (PDF) for more info about the changes and updates.
 - Read also "Change - Fix Log.txt" for previous updates/release notes and changes.
+
+
+
+
 
 ==========================================
 V4.0.3 (June 2018)
@@ -328,6 +371,10 @@ Warning to those who planned to update/download to this new version to your curr
 End of Version 4
 ==========================================
 
+
+
+
+
 ==========================================
 Start of Version 5
 ==========================================
@@ -382,6 +429,10 @@ V5.0.0 (August 2018)
 
 (Please Read "RealToon (User Guide).pdf" again for more info about the new features/changes.)
 
+
+
+
+
 ==========================================
 V5.0.1 (November 2018)
 
@@ -435,6 +486,10 @@ V5.0.1 (November 2018)
 
 (Read "RealToon (User Guide).pdf" for more info)
 
+
+
+
+
 ==========================================
 V5.1.1 (December 2018)
 
@@ -446,12 +501,20 @@ V5.1.1 (December 2018)
 
 - Added Fade Transparency with outline example.
 
+
+
+
+
 ==========================================
 V5.2.1 (December 2018)
 
 [New]
 
 - Outline Extrude Method [Re-added Option/Feature]
+
+
+
+
 
 ==========================================
 (V5.3.1) (January 2019)
@@ -460,6 +523,10 @@ V5.2.1 (December 2018)
 [Fixed]
 
 - See Through option is not working when Outline is enabled.
+
+
+
+
 
 ==========================================
 (V5.0.2) (February 2019)
@@ -485,6 +552,10 @@ V5.2.1 (December 2018)
 - GUI/UI changed a bit to fix inspector width problem.
 - "Outline Offset Enable" is removed and "Outline Offset" function has been changed.
 
+
+
+
+
 ==========================================
 (V5.1.2) (February 2019)
 
@@ -500,6 +571,10 @@ V5.2.1 (December 2018)
 - "ShadowT Light Threshold" default value changed to 50 and its precision to 0.01.
 
 (To convert your "ShadowT Light Threshold" current value, just multiply your "ShadowT Light Threshold" current value by  100" if you updated your current work/project to this version and if you are using "ShadowT".)
+
+
+
+
 
 ==========================================
 (V5.2.2) (March 2019)
@@ -542,6 +617,10 @@ V5.2.1 (December 2018)
 
 - Improve "GI Flat Shade".
 - Removed unnecessary duplicate lines. [LWRP Version]
+
+
+
+
 
 ==========================================
 (V5.0.3) (May 2019)
@@ -608,6 +687,10 @@ V5.2.1 (December 2018)
 *Don't update it might overwrite it.
 *Only update if you make another project.
 
+
+
+
+
 ==========================================
 (V5.0.4) (September 2019)
 
@@ -666,6 +749,10 @@ To prevent that adjust this option.
 - Improved "Enable/Disable Features".
 
 (For those who use URP, after you update to this version, update your URP package to 7.1.1)
+
+
+
+
 
 ==========================================
 (V5.0.6) (March 2020)
@@ -729,6 +816,10 @@ that option is under the "Lighting" category.
 
 - If your current project is in Linear color space, RealToon color properties 
 will be automatically converted to that color space.
+
+
+
+
 
 ==========================================
 (V5.0.7) (May 2020)
@@ -863,6 +954,10 @@ Read the "Please read before you unpack or import" for important new notes.
 * ”_GIShadeThreshold” and GUI error. (Built-In RP - Unity 2017)
 * One Pointlight cookie line typo. (Built-In RP)
 
+
+
+
+
 ==========================================
 (V5.0.8) (March 2021)
 ==========================================
@@ -942,6 +1037,44 @@ Note and warning
 To those who planned to update your current project to this version:
 *RealToon URP color blending or mixing has been changed, You need to adjust the colors of your object again.
 *RealToon URP "Fade Transparency" is now merged to "Default", Change your transparent object shader to "Default" and enable "Transparent Mode".
+
+
+
+
+**(5.0.8p10 [Patch#10] - July 2024)**
+
+[New]
+- Screen Space Rimlight [HDRP]
+- Triplanar [URP and HDRP]
+- Soft Cutout (New Option for Cutout Feature) [URP and HDRP]
+- HDRP is finally out of beta starting Unity 6 (HDRP 17)
+- Starting Unity 6 (URP 17) DeNorSob Outline is finally volume based.
+
+[Improvements]
+- Improved DeNorSob Outline outline width. [URP and HDRP]
+- Improved Near Fade Transparency distance. [URP and HDRP]
+
+[Fixed]
+- Fix all errors [URP and HDRP]
+- Fix DOTS errors [URP and HDRP]
+
+
+
+**(5.0.8p9 [Patch#9] - May 2024)**
+
+[New]
+- Added support for HDRP 17 and URP 17.
+- Added support for Unity 6 and ready. [URP and HDRP]
+- GPU Resident compatible. [URP 17 and HDRP 17]
+**GPU Resident on RealToon URP, you need to set the Shader Compilation from 2.0 to 4.5 under the RealToon Settings section.
+
+[Improvements]
+- GI/Ambient light improved and can use both Static and Dynamic. [HDRP 14 to HDRP 17]
+- GI Flat Shade correct light. [URP and HDRP]
+- Improved URP and HDRP DOTS/Hybrid Renderer shader properties. [URP 17 and HDRP 17]
+
+[Fix]
+- URP 17 and HDRP 17 properties error.
 
 
 
@@ -1114,3 +1247,282 @@ Note:
 change the "Shader Compilation Target" to 4.5, it is under the "Settings" section.
 RealToon HDRP is already Shader Compilation Target 4.5.
 
+
+
+
+
+==========================================
+(V5.0.9) (October 2024)
+==========================================
+This update supports Unity 5, 2017, 2018, 2019, 2020, 2021, Unity and future unity versions.
+
+
+
+**(Main Update)**
+
+[New]
+- Perspective Adjustment
+"Adjusting the perspective from 3D to 2D/2D to 3D."
+
+- Smear Effect 
+"For Anime/Toon style smear motion."
+
+[Improvements]
+- Minor UI improvements starting Unity 6 - URP 16 & HDRP 16.
+
+[Fixed]
+- Fix all errors starting URP10/HDRP 10 to 16.
+
+
+
+
+==========================================
+(V5.0.10) (December 2024)
+==========================================
+This update supports Unity 5, 2017, 2018, 2019, 2020, 2021, Unity and future unity versions.
+
+
+
+**(Main Update)**
+
+[New]
+- SDF Mode (ShadowT New Option) (Built-In, URP and HDRP)
+"SDF Style Shadowing."
+
+- Add/Remove "See Through" feature (New Setting Option) (URP) 
+"Add or Remove 'See Through' feature on the RealToon Shader."
+"Useful for those who don't want to use it and fix overlap fog on the Outline."
+
+[Changes]
+- Smooth Object Normal does not get disable anymore when Self Shadow is disabled. (Built-In, URP and HDRP)
+- "See Through" feature is default disabled, just enable or add it if you need it, Your settings are still maintained even disabled. (URP)
+
+[Improvements]
+- Smooth Object Normal has been improved including the Smooth Object Normal helper script. (Built-In, URP and HDRP)
+- RealToon Tools/Script has been improved and added some info.
+
+[Fixed]
+- Some fog asset overlap the RealToon Shader - Outline, it can be fix by disable the 'See Through' feature. (URP)
+
+
+
+
+==========================================
+(V5.0.11) (February 2025)
+==========================================
+This update supports Unity 5, 2017, 2018, 2019, 2020, 2021, Unity 6 and future unity versions.
+
+
+
+**(Main Update)**
+
+
+[New]
+- (ShadowT - SDF Mode Helper - New Options) (Built-In, URP and HDRP)
+*Forward Inverted - Invert Forward/Front position of the object.
+*Right Inverted - Invert Right position of the object.
+*Light Threshold - The amount of light.
+
+- RealToon Shader Cache (New Tool) (Built-In, URP and HDRP)
+"To reduce or clear cached RealToon Shader."
+"Useful for after update RealToon Shader or Re-import RealToon Shader."
+"To access this, "Window -> RealToon -> RealToon Shader Cache"."
+
+- Support URP Dynamic Lightmap. (Unity 6.0 to Latest)
+- Support URP Deferred+. (Unity 6.1 to Latest)
+- Support Unity 6.1
+- Early add support for the later Unity 6.2.
+
+
+[Changes]
+- RealToon Shader (SRP) packages has been reorganized, separate Unity 6 folder and Older/Previous Unity version folders.
+- (URP 10 - 11) and (HDRP 10 - 11) has been removed, not supported anymore.
+
+
+[Fixed]
+- Gloss feature "Unity_WorldToObject" error. (URP)
+- Overlap Sky & RayTracing Reflection. (HDRP)
+- RealToon HDRP Example missing Global Volume and overexposed. (HDRP)
+- URP Lightmap errors. (URP)
+
+
+
+
+==========================================
+(V5.0.12) (April 2025)
+==========================================
+This update supports Unity 5, 2017, 2018, 2019, 2020, 2021, Unity 6 and future unity versions.
+
+
+
+**(Main Update)**
+
+
+[New]
+- Multiple Directional Lights support (HDRP)
+- Anisotropic Mode (Anisotropic Highlights) (New Feature for Gloss Texture) (URP and HDRP)
+- RealToon Built-In/BiRP now support Perspective Adjustment. (BiRP/Built-In)
+- Anti - Aliasing (MSAA) Affect Cutout (New Option for Cutout) (URP)
+
+[Changes]
+- Cutout feature option default value changed to 0.5.
+
+[Minor Improvements]
+- Object Selection (HDRP)
+- DeNorSob Outline (URP and HDRP)
+- Screen Space Outline (URP and HDRP)
+- Screen Space Rimlight(HDRP)
+
+[Fixed]
+- Can't select object including flat plane object. (BiRP/Built-In and URP)
+- Error when in debug baked lightmap. (URP)
+
+
+
+==========================================
+(V5.0.13) (June 2025)
+==========================================
+This update supports Unity 5, 2017, 2018, 2019, 2020, 2021, Unity 6 and future unity versions.
+
+
+
+**(Main Update)**
+
+
+[New]
+- VRC Light Volumes Support (VRChat) (Built-In/BiRP)
+*VRC Light Volumes packages is needed to be able to use this.
+
+- Anti - Aliasing Softness (New Companion Option for Anti - Aliasing Affect Cutout) (URP)
+*This will adjust the Anti - Aliasing Softness/Hardness Cutout.
+
+- Stencil: Pass (New Option For Outline) (URP)
+*Use it to resolve 'Mask UI' and other assets like weather and fog overlap issues.
+*Use 'Keep' for Mask UI while 'Invert' for other assets like weather and fog.
+
+- Limit Light Intensity (New Option For Lighthing) (Built-In/BiRP, URP & HDRP)
+*To limit light intensity, minimum and maximum intensity value.
+
+- RealToon Resources (New Folder Added)
+*Some resource for you to use on your objects/models that uses RealToon Shader.
+
+- A new Improved RealToon Welcome Screen
+*You can just click a button to import the right RealToon Shader package.
+*Information section about your project including SRP version and Unity Versions,
+You don't need to go to package manager to see the versions.
+
+- Map Mode (New Option For Self Lit)
+*This will allow you to use Emission Maps.
+
+- Lightmap Support (RealToon Shader - Default Lite) (Built-In/BiRP)
+- WebGPU support (URP) (Unity 6 to Later)
+- Nintendo Switch 2 support (URP & HDRP)
+
+
+[Changes]
+- Change RealToon Reflection Roughtness shader variable "_ReflectionRoughtness" to "_Smoothness". (URP)
+*Changed so that other assets affects RealToon's Reflection roughtness value.
+
+[Fixed]
+- 'Cutout' does not affect Depth. (URP)
+- 'Anisotropic Highlights' does not work. (URP) (Deferred and Deferred+) (Unity 6.1)
+- 'UI Mask' overlap issues, resolve by setting the added new outline option 'Stencil: Pass' to 'Keep'. (URP)
+- 'Gloss Texture Follow Light' not working properly. (URP)
+- Raytracing doubled declared punctual light function. (HDRP)
+
+
+
+==========================================
+(V5.0.14) (October 2025)
+==========================================
+This update supports Unity 5, 2017, 2018, 2019, 2020, 2021, Unity 6 and future unity versions.
+
+
+
+**(Main Update)**
+
+
+[New]
+(New Options for RimLight feature) 
+- RimLight In Shadow (URP & HDRP)
+- Position (Adjust RimLight Position.) (ALL)
+- Intensity (Adjust The Intensity of The Option "Light Affect Rim Light Color".) (HDRP)
+
+(New Options for ShadowT SDF Mode - Helper) (All)
+- SDF Texture (SDF Shadow Texture Slot.)
+- Hardness (Adjust the hardness of the SDF Shadow.)
+- Self Shadow (Enable/Disable RealToon's Self Shadow feature.)
+
+(New Options for Outline) (All)
+- Outline Resize (Adjust the XYZ axis outline width/size.)
+
+(New Options for Welcome Screen) (All)
+- Check Updates
+
+- Object Position Z (CS) (All) - (Adjust object z position in clip space.)
+- Decal Support for RealToon HDRP.
+
+[Improvements]
+- Improved Welcome Screen UI.
+- Dynamic Lightmap recode. (URP Unity 6.0 to later)
+- Does not create any additional shader keywords when you enable options. (URP Unity 6.0 to later)
+- Enable/Disable Transparent Mode has been rewrite because of the added Decals. (HDRP Unity 6.0 to later)
+
+[Changes]
+- RayTracing Punctual Lights are changed to newer variables and functions. (HDRP Unity 6.0 to later)
+- Enable Arealight option default to enabled.  (HDRP Unity 6.0 to later)
+- Swap Shader To RealToon Tool, Emission Map will now use it as SelfLit Emission Map not Mask.
+- URP 12 & 13 and HDRP 12 & 13 are not supported anymore.
+
+[Fixed]
+- WRITE_NORMAL_BUFFER keyword redefinition. (HDRP Unity 6.0 to later)
+- Decal does not follow Render Layer selections. (URP Unity 6.1 to later)
+- Depth Normals Pass does not have _WRITE_RENDERING_LAYERS keyword. (URP 16 to below - Deferred Rendering)
+- unity_ObjectToWorld error. (URP)
+- Sample Directional Lightmap error. (URP)
+- Enable/Disable VRC Light Volumes not working. (BiRP/Built-In) (VRC)
+
+
+
+==========================================
+(V5.0.15) (March 2026)
+==========================================
+
+**(Main Update)**
+
+
+[New]
+- Tessellation Support (URP) [Unity and Tuanjie]
+*To use this need to change the compilation target to 4.5 under the 'Settings' category then click 'Enable Tessellation'.
+
+- ZWrite (New Option For Outline) (URP) [Unity and Tuanjie]
+*A separate ZWrite control for outline.
+
+- UV Set (URP and HDRP) [Unity and Tuanjie]
+*Selective UV Set.
+
+- Render Order (URP and HDRP) [Unity and Tuanjie]
+*To adjust the object render order, Infront or Behind.
+
+- ZTest (URP) [Unity and Tuanjie]
+*There is also a separate ZTest for outline.
+
+- Layers To Exclude [New Option For DeNorSob Outline] (URP) (Unity 6.0 To Later) [Unity]
+- Support Unity 6.4 and 6.5 [Unity]
+- Normals support for decals (URP and HDRP) [Unity and Tuanjie]
+- Deferred+ Support (URP) [Tuanjie]
+- Support Tuanjie 1.8.0 to later/future versions. [Tuanjie]
+
+[Improvements]
+- Perspective Adjustment (Close-Up) now using depth. [Unity and Tuanjie]
+- RayTracing Reflection reflected GI. [Tuanjie]
+- Welcome Screen package checking. [Unity and Tuanjie]
+
+[Changes]
+- Bottom inspector settings are now move to Settings category. [Unity and Tuanjie]
+
+[Fixed]
+- Implicit truncation of vector type. (Unity 6.1) [Unity]
+- DOTS Instancing Error (Unity 6.0 to Later) [Unity]
+- Show Normal is not checkbox option. (Smooth Object Normal Option) (Unity 6.1 to Later) [Unity]
+- Forward+ is not working [Tuanjie]

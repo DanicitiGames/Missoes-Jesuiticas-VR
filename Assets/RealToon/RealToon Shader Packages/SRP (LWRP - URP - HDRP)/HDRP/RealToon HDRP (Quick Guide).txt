@@ -1,0 +1,105 @@
+RealToon (HDRP) (Quick Guide)
+===========================================================
+
+===========================================================
+How to use RealToon Effect - DeNorSob Outline
+===========================================================
+
+1. Go to "GameObject" > "Volume" then click "Global Volume".
+2. Then next click "Global Volume" in the "Hierarchy" or in the scene.
+3. Click "New", this will create a "Global Volume Profile".
+4. Click "Add Override" then go to "Post-Processing" > "RealToon" > "DeNorSob Outline".
+
+* Then next we will add DeNorSob Outline in the "Custom Post Process Order".
+
+5. To add Go to "Edit" > "Project Settings" > "HDRP Default Settings" then scroll down to "Custom Post Process Order".
+6-b. Next click the "+" sign under the "AfterOpaqueAndSky " then click "RealToon.Effects.DeNorSobOutline".
+
+###########################################################
+If you are planning to use DeNorSob Outline in making games or make a build.
+###########################################################
+
+1.Go to "Edit" > "Project Settings" then "Graphics".
+2.After that add 1 to the "Size" under "Always Included Shaders", now it adds another element.
+3.Click the last element then search for "DeNorSob Outline" then click it.
+
+*Now DeNorSob Outline will be included in a build.
+
+===========================================================
+If you want to color the shadow using texture.
+===========================================================
+
+1. Enable "Shadow Color Texture".
+2. Go to "Shadow" > "Shadow Color Texture".
+3. Click the texture/map slot "Shadow Color Texture".
+4. Search for the texture you want to use as color shadow.
+
+*If you want to select a color using these properties
+("Overall Shadow Color", "Self Shadow - Color" or "ShadowT - Color"),
+Just empty the "Shadow Color Texture" texture slot.
+
+===========================================================
+How to Reduce Shadow or Remove Shadow Artifacts on the model/object without affecting others.
+===========================================================
+
+1. Just change the "Reduce Shadow" option on the RealToon Shader.
+
+===========================================================
+[Unity HDRP] How to add fogs, shadows, skies and other features in the scene
+===========================================================
+
+1. Go to "GameObject" > "Volume" then click "Global Volume".
+2. Then next click "Global Volume" in the "Hierarchy" or in the scene.
+3. Click "New", this will create a "Global Volume Profile". or just click "Profile" and choose the other profile you've created.
+4. Click "Add Override" to add those features you want.
+
+===========================================================
+[Unity HDRP] How to change and adjust the default global volume profile 
+===========================================================
+
+1.Go to "Edit" > "Project Settings" then "HDRP Global Settings".
+2.Go to "Volume Profiles" then change, add or remove the features you want.
+3.Click "New" if you want to create another "Default Volume Profile Asset" or just click it then search for other profiles.
+
+*This is global means it will apply in all scenes with or without the "Global Volume" game object.
+
+===========================================================
+[Unity HDRP] How to setup and enable DXR/Raytracing
+===========================================================
+
+1.Go to "Window > Render Pipeline > HD Render Pipeline Wizard".
+2.Click "HDRP + DXR" tab under "Configuration Checking".
+3.Click "Fix All"
+4.After that it will enable all the necessary features.
+5.It will ask you to restart the editor, just click "Restart" or "Ok".
+6.Done.
+
+*Unity uses DXR and it will work on all GPUs that supports raytracing.
+
+===========================================================
+[Unity HDRP] How to create your own Raytracing Override Volume
+===========================================================
+
+1.Go to "Game Object > Volume > Global Volume".
+2.Rename your newly created volume.
+3.Click "New", this will create a new Volume Profile.
+4.Click "Add Override".
+5.Go to "Ray Tracing" and then select the raytracing features you want to use.
+6.Done.
+
+*For "Raytracing Reflection" go to "Lighting > Screen Space Reflection".
+
+===========================================================
+[Unity HDRP] To access the HDRP main settings (Mostly for beginners)
+===========================================================
+
+1.Go to "Edit" > "Project Settings" > "Quality" then click "Render Pipeline Asset".
+
+*It will highlight that asset in the "Project Window".
+*On this asset, you can adjust the quality of the shadow and size of the shadow map, the number of lights and other advance options/features.
+*To know more about this, check the Unity's manual or watch some tutorial videos on youtube about HDRP.
+
+===========================================================
+For other option descriptions and uses, read the included 
+"RealToon (User Guide).pdf" or click the "User Guide" under RealToon inspector.
+===========================================================
