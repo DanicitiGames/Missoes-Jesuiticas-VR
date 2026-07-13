@@ -23,6 +23,7 @@ Material:
   - N_F_TRANS_ON
   - _ALPHATEST_ON
   - _NORMALMAP
+  - _UVSET_UV0
   m_InvalidKeywords:
   - _CUSTOMLIGHTDIRECTIONFOLLOWOBJECTROTATION_OFF
   - _GIFLATSHADE_OFF
@@ -156,12 +157,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AAS: 0.0001
+    - _AlpToCov: 0
     - _AlphaBaseCutout: 1
     - _AlphaToMask: 0
     - _BleModDest: 10
     - _BleModSour: 5
     - _BlendMode: 1
     - _BumpScale: 1
+    - _ClipAdju: 0
     - _Compa: 4
     - _ComputeMeshIndex: 0
     - _CullMode: 2
@@ -191,6 +195,8 @@ Material:
     - _Glow_Edge_Width: 1
     - _HighlightColorPower: 0.7
     - _IndirectLightIntensity: 0.1
+    - _LLI_Max: 1
+    - _LLI_Min: 0
     - _LigIgnoYNorDir: 0
     - _LightAffectOutlineColor: 0
     - _LightAffectRimLightColor: 0
@@ -207,6 +213,7 @@ Material:
     - _MaxFadDistance: 2
     - _MinFadDistance: 0
     - _MixMainTexToOutline: 0
+    - _N_F_ANIS: 0
     - _N_F_CA: 0
     - _N_F_CLD: 0
     - _N_F_CO: 1
@@ -220,6 +227,7 @@ Material:
     - _N_F_GLOT: 0
     - _N_F_HDLS: 0
     - _N_F_HPSS: 0
+    - _N_F_LLI: 0
     - _N_F_MC: 0
     - _N_F_MSSOLTFO: 0
     - _N_F_NFD: 0
@@ -227,21 +235,36 @@ Material:
     - _N_F_NM: 1
     - _N_F_O: 1
     - _N_F_OFLMB: 0
+    - _N_F_PA: 0
     - _N_F_PT: 0
     - _N_F_R: 0
     - _N_F_RDC: 1
     - _N_F_RL: 0
+    - _N_F_RLIS: 0
+    - _N_F_SCO: 0
     - _N_F_SCT: 0
+    - _N_F_SE: 0
     - _N_F_SL: 0
+    - _N_F_SLMM: 0
     - _N_F_SON: 0
     - _N_F_SS: 1
     - _N_F_ST: 0
     - _N_F_STIAL: 0
     - _N_F_STIS: 0
+    - _N_F_STSDFM: 0
+    - _N_F_TP: 0
+    - _NoiTexAffStraWidt: 0
+    - _NoisTexInten: 1
+    - _NoiseSize: 100
     - _NoisyOutlineIntensity: 0
+    - _NorMapAsDis: 0
     - _NormalMapIntensity: 1
+    - _ObjePosiZCS: 0
     - _Opacity: 1
     - _Oper: 0
+    - _OutStenPass: 0
+    - _OutZTest: 4
+    - _OutZWrite: 1
     - _OutlineColorMode: 1
     - _OutlineCullMode: 1
     - _OutlineExtrudeMethod: 0
@@ -252,10 +275,15 @@ Material:
     - _OutlineWidthMode: 0
     - _OutlineZPostionInCamera: 0
     - _OverallShadowColorPower: 0.7
+    - _PADist: 0
+    - _PASize: 0.5
+    - _PASmooTrans: 1
     - _PSGLOTEX: 0
     - _PTexturePower: 1
     - _PointSpotlightIntensity: 0
+    - _PresAdju: 1
     - _RELG: 1
+    - _RQSO: 0
     - _ReceiveShadowRate: 1
     - _ReduSha: 0.5
     - _RefMetallic: 0
@@ -293,18 +321,29 @@ Material:
     - _ShadowTIntensity: 1
     - _ShadowTLightThreshold: 50
     - _ShadowTShadowThreshold: 0
+    - _ShifAnis: 0
     - _ShowInAmbientLightShadowIntensity: 1
     - _ShowInAmbientLightShadowThreshold: 0.4
     - _ShowNormal: 0
     - _SimTrans: 0
     - _SkinMatrixIndex: 0
     - _SmoothObjectNormal: 0
+    - _Smoothness: 0
     - _SrcBlend: 1
+    - _StraWidt: 10
     - _TEXMCOLINT: 1
     - _TRANSMODE: 1
+    - _TessellationFar: 1
+    - _TessellationNear: 1
+    - _TessellationSmoothness: 0.5
+    - _TessellationTransition: 0.8
     - _TexturePatternStyle: 0
+    - _TrailSize: 1.5
     - _TransAffSha: 1
     - _TransparentThreshold: 0
+    - _TriPlaBlend: 4
+    - _TriPlaTile: 1
+    - _UVSet: 0
     - _UseSecondaryCutout: 0
     - _UseTLB: 0
     - _UvAnimRotation: 0
@@ -313,6 +352,7 @@ Material:
     - _VertexColorBlueAffectOutlineWitdh: 0
     - _VertexColorGreenControlSelfShadowThreshold: 0
     - _VertexColorRedControlSmoothObjectNormal: 0
+    - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -322,11 +362,17 @@ Material:
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ObjPosi: {r: 0, g: 0, b: 0, a: 0}
+    - _ObjectForward: {r: 0, g: 0, b: 0, a: 0}
+    - _ObjectRight: {r: 0, g: 0, b: 0, a: 0}
+    - _OutResi: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0.27450982, g: 0.08627451, b: 0.1254902, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0.93823904, g: 0.65896195, b: 0.73757786, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
+    - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLigPosi: {r: 1, g: 1, b: 1, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SSAOColor: {r: 0, g: 0, b: 0, a: 0}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
