@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3a8444903aca7cb4c94ca5c987ce165c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackdropTreelineTropical003_3K
+    second: {fileID: 2100000, guid: 7b3cad07993e3824ab9c78679d1d177b, type: 2}
+  - first:
+      type: UnityEngine:Texture
+      assembly: UnityEngine.CoreModule
+      name: BackdropTreelineGreenleaf001_3K
+    second: {fileID: 2800000, guid: dc92fbaffd145304fa2ffbe0260b34aa, type: 3}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
