@@ -1,0 +1,41 @@
+What's New to RealToon V5.0.15 (March 2026)
+=====================================
+
+[New]
+- Tessellation Support (URP)
+*To use this need to change the compilation target to 4.5 under the 'Settings' category then click 'Enable Tessellation'.
+
+- ZWrite (New Option For Outline) (URP)
+*A separate ZWrite control for outline.
+
+- UV Set (URP and HDRP)
+*Selective UV Set.
+
+- Render Order (URP and HDRP)
+*To adjust the object render order, Infront or Behind.
+
+- ZTest (URP)
+*There is also a separate ZTest for outline.
+
+- Layers To Exclude [New Option For DeNorSob Outline] (URP) (Unity 6.0 To Later)
+- Support Unity 6.4 and 6.5
+- Normals support for decals (URP and HDRP)
+
+[Improvements]
+- Perspective Adjustment (Close-Up) now using depth.
+- Welcome Screen package checking.
+
+[Changes]
+- Bottom inspector settings are now move to Settings category.
+
+[Fixed]
+- Implicit truncation of vector type. (Unity 6.1)
+- DOTS Instancing Error (Unity 6.0 to Later)
+- Show Normal is not checkbox option. (Smooth Object Normal Option) (Unity 6.1 to Later)
+====================================
+
+#Read the "Change - Fix Log.txt." file for previous updates.
+#This update supports Unity 5, 2017, 2018, 2019, 2020, 2022, 2023, Unity 6 and future unity versions.
+
+[Other Notes]
+* If you encounter some problems or need help just contact by email.

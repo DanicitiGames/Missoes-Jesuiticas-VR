@@ -1,0 +1,48 @@
+RealToon (HDRP)
+===========================================================
+Requirements/Recommendations
+===========================================================
+
+===========================================================
+Note:
+===========================================================
+
+*How to download, import and unpack RealToon (HDRP) Shader Packages Video Tutorial:
+https://www.youtube.com/watch?v=JVlbOYi2V3M&t=157s
+
+===========================================================
+
+*DXR/Raytracing is supported.
+- Unity uses DXR and it will work on all GPUs that supports raytracing.
+
+*Tessellation version is still in development.
+
+*All lights are supported: Direction, Point, Spot and Arealight.
+
+*Light layers is possible to use.
+
+*Use RealToon + Unity's HDRP shaders is possible too.
+
+*Hover your mouse to an option or feature name for 
+option description and infos.
+
+*There's a RealToon HDRP user guide pdf and quick guide included text file.
+
+*If you encounter any errors/problems or something just email me.
+
+===========================================================
+RealToon HDRP current issues
+===========================================================
+
+[For Outline] [Traditional]
+*In normal or opaque state, far fog will overlap but if there is an opaque object behind, far fog will not overlap. 
+*Currently, there is no HDRP line code or function to mask this.
+*In 'Transparent Mode' far fog will not overlap."
+
+
+[For Arealight (HDRP 15 and Below]
+*If the size of a Rect type arealight is too un-even like 'X:30 | Y:1' the light falloff will cause some noise.
+*Current arealight light falloff is just a temporary solution.
+*"Tube Light Falloff" option is a temporary option for Arealight Tube Type light falloff.
+*These current issues only applies when "Area Light Smooth Look" option disabled.
+*Arealight currently in beta, if you want or planned to use it just enable "Enable Area Light" under the category "Lighting".
