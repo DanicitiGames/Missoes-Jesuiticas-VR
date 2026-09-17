@@ -16,7 +16,7 @@
     "com.unity.probuilder": "6.0.9",
     "com.unity.purchasing": "5.3.1",
     "com.unity.render-pipelines.universal": "17.3.0",
-    "com.unity.renderstreaming": "3.1.0-exp.7",
+    "com.unity.renderstreaming": "file:com.unity.renderstreaming",
     "com.unity.webrtc": "3.0.0-pre.5",
     "com.unity.shadergraph": "17.3.0",
     "com.unity.test-framework": "1.6.0",
